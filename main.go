@@ -60,6 +60,7 @@ func (s *stack) pop() {
 	fmt.Println(s.data)
 	if !s.isEmpty() {
 		s.data = append(s.data[:s.top-1], s.data[s.top-1+1:]...)
+		s.top--
 	} else {
 		fmt.Println("underflow condition")
 	}
